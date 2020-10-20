@@ -1,0 +1,13 @@
+spring:
+    datasource:
+        url: jdbc:oracle:thin:@localhost:1521:XE
+        username: EA101
+        password: 123456
+        driver-class-name: oracle.jdbc.driver.OracleDriver
+server:
+    port: 8083
+    
+mybatis:
+    type-aliases-package: com.springBoot.entity
+    
+
