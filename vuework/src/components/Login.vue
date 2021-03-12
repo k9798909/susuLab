@@ -30,34 +30,19 @@
 </template>
 
 <script>
-import { login } from "../api/api";
 export default {
   data: () => ({
     loginDto: {
-      account: "",
-      password: "",
-      isLogin:false,
-      msg:""
-    },
+      userAccount: "",
+      userPassword: "",
+    }
   }),
   methods: {
     clickLogin() {
-      if (!this.loginDto.account || !this.loginDto.password) 
-        alert("帳號或密碼請勿空白");
-      else
-        login(this.loginDto)
-        .then(result=>{
-          let loginDto = result.data;
-          if(loginDto.isLogin){
-            this.$store.commit("login",loginDto);
-            this.$router.push(decodeURIComponent(this.$router.query));
-          }
-          alert(loginDto.msg);
-          })
-        .catch(error=>{console.log(error)})
+      alert("登入")
     },
     logout() {
-      this.$store.commit("logout");
+        alert("登出")
     },
   },
 };

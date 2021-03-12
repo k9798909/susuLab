@@ -6,5 +6,4 @@ const userRequest = axios.create({
 
   })
 
- export const login = data => userRequest.post('/backUser/login/',data)
- export const userData = data => userRequest.post('/backUser/userData/',data)
+ export const login = data => userRequest.get('/userdata',data)
